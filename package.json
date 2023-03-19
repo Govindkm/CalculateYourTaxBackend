@@ -4,7 +4,8 @@
   "description": "Backend Service for TaxCalculator Application",
   "main": "app.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "nodemon app.js"
   },
   "keywords": [
     "tax",
@@ -14,5 +15,16 @@
     "indiantaxes"
   ],
   "author": "Govind Kumar Mishra",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-joi-validation": "^5.0.1",
+    "joi": "^17.8.4",
+    "nodemon": "^2.0.21",
+    "swagger-ui-express": "^4.6.2",
+    "winston": "^3.8.2",
+    "winston-daily-rotate-file": "^4.7.1"
+  }
 }
