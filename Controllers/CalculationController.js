@@ -21,10 +21,11 @@ const incomeFormSchema = Joi.object({
 const deductionFormSchema = Joi.object({
     section80C: Joi.object({
         ppf: Joi.number().required().default(0),
-        nps: Joi.number().required().default(0),
+        
         elss: Joi.number().required().default(0),
         others: Joi.number().required().default(0)
     }).required(),
+    nps: Joi.number().required().default(0),
     section80D: Joi.object({
         yourParentsAge: Joi.boolean().optional().default(false),
         parentsHIS: Joi.number().required().default(0),

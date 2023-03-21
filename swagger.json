@@ -53,10 +53,6 @@
             "type": "number",
             "description": "PPF (Public Provident Fund) deduction amount"
           },
-          "nps": {
-            "type": "number",
-            "description": "NPS (National Pension System) deduction amount"
-          },
           "elss": {
             "type": "number",
             "description": "ELSS (Equity Linked Saving Scheme) deduction amount"
@@ -91,6 +87,11 @@
             "$ref": "#/components/schemas/Section80C",
             "description": "Section 80C deductions",
             "required": true
+          },
+          "nps": {
+            "type": "number",
+            "description": "NPS (National Pension System) deduction amount",
+            "default": 0
           },
           "section80D": {
             "$ref": "#/components/schemas/Section80D",

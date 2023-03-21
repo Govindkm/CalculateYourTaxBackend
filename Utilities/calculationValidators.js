@@ -1,7 +1,7 @@
 const deductionsValidator = function (data) {
 
     const deductions80C = data.deductionForm.section80C.ppf  + data.deductionForm.section80C.elss + data.deductionForm.section80C.others;
-    const total80C = deductions80C + data.deductionForm.section80C.nps;
+    const total80C = deductions80C + data.deductionForm.nps;
     const deductions80D = data.deductionForm.section80D.parentsHIS + data.deductionForm.section80D.selfHIS;
     const deductions80G = data.deductionForm.section80G;
 
@@ -9,7 +9,7 @@ const deductionsValidator = function (data) {
         throw new Error("Deductions under Section 80C cannot be more than 150000");
     } 
 
-    if(data.deductionForm.section80C.nps>50000){
+    if(data.deductionForm.nps>50000){
         throw new Error("Deductions under Section 80CCD for NPS cannot be more than 50000");
     }
 

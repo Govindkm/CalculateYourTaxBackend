@@ -2,7 +2,7 @@ const getOldTaxableIncome = (data) => {
     
     let grossMonthlySalary = data.incomeForm.basicpay + data.incomeForm.da + data.incomeForm.hra + data.incomeForm.lta + data.incomeForm.cityallowance + data.incomeForm.miscellaneous + data.incomeForm.monthlybonus + data.incomeForm.quaterlybonus/4 + data.incomeForm.annualbonus/12;
     let grossAnnualSalary = grossMonthlySalary * 12;
-    let totalDeductions = data.deductionForm.section80C.ppf + data.deductionForm.section80C.elss + data.deductionForm.section80C.others + data.deductionForm.section80D.parentsHIS + data.deductionForm.section80D.selfHIS + data.deductionForm.section80G;
+    let totalDeductions = data.deductionForm.section80C.ppf + data.deductionForm.section80C.elss + data.deductionForm.section80C.others + data.deductionForm.section80D.parentsHIS + data.deductionForm.section80D.selfHIS + data.deductionForm.section80G + data.deductionForm.nps;
     let exemptionsReceived = {hra: Math.min(data.exemptionForm.salaryComponents.hra, data.incomeForm.basicpay*6) , lta: Math.min(data.exemptionForm.salaryComponents.lta, data.incomeForm.lta*12)}
     let totalExemptions = exemptionsReceived.hra + exemptionsReceived.lta;
     let standardDeduction = grossAnnualSalary > 50000 ? 50000 : grossAnnualSalary;
@@ -24,6 +24,7 @@ const getOldTaxableIncome = (data) => {
     return {"Gross Annual Income": grossAnnualSalary, "Taxable Income": taxableIncome, deductions: {total: totalDeductions+totalExemptions+standardDeduction, deductions: {"Chapter VI A deductions": totalDeductions, "Exempt Allowances": totalExemptions, "Standard Deduction": standardDeduction}}};
 
 }
+
 
 const getNewTaxableIncome = (data) => {
     const grossMonthlySalary = data.incomeForm.basicpay + data.incomeForm.da + data.incomeForm.hra + data.incomeForm.lta + data.incomeForm.cityallowance + data.incomeForm.miscellaneous + data.incomeForm.monthlybonus + data.incomeForm.quaterlybonus/4 + data.incomeForm.annualbonus/12;
@@ -66,7 +67,7 @@ const getOldTax = (taxableIncome) => {
     } else if(taxableIncome > 1000000){
         tax = (taxableIncome - 1000000) * 0.3 + 112500;
     }
-    return tax;
+    return Math.round(tax);
 }
 
 const getNewTax = (taxableIncome) => {
@@ -80,7 +81,7 @@ const getNewTax = (taxableIncome) => {
     } else if(taxableIncome > 1500000){
         tax = 150000 + (taxableIncome-1500000) * 0.3;
     }
-    return tax;
+    return Math.round(tax);
 }
 
 module.exports = { getOldTaxableIncome, getNewTaxableIncome, getGrossSalary, getTaxes, getOldTax, getNewTax };

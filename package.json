@@ -4,7 +4,7 @@
   "description": "Backend Service for TaxCalculator Application",
   "main": "app.js",
   "scripts": {
-    "test": "test",
+    "test": "test && mocha --exit || mocha --exit --timeout 10000",
     "start": "nodemon app.js"
   },
   "keywords": [
@@ -26,5 +26,11 @@
     "swagger-ui-express": "^4.6.2",
     "winston": "^3.8.2",
     "winston-daily-rotate-file": "^4.7.1"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "request": "^2.88.2",
+    "supertest": "^6.3.3"
   }
 }
