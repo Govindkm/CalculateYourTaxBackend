@@ -1,7 +1,7 @@
 const winston = require('winston');
 const path = require('path');
 const dotenv = require('dotenv');
-dotenv.config({ path: "Config\\config.env" });
+dotenv.config();
 const DailyRotateFile = require('winston-daily-rotate-file');
 
 const dailyRotateFileTransport = new DailyRotateFile({

@@ -3,6 +3,11 @@ const app = express();
 const cors = require('cors');
 const swaggerUi = require('swagger-ui-express');
 const errorHandler = require('./Middlewares/error');
+const dotenv = require('dotenv');
+dotenv.config();
+
+const port = process.env.PORT || 3000;
+
 
 const swaggerDocument = require('./swagger.json');
 const logger = require('./Middlewares/logging');
@@ -10,9 +15,9 @@ const logger = require('./Middlewares/logging');
 // Config
 if (process.env.NODE_ENV !== "PRODUCTION") {
     logger.info("Development Mode Activated");
+    app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+    logger.info("Swagger UI is running on /api-docs");
 }
-
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 const corsOptions = {
     origin: '*',
@@ -33,13 +38,17 @@ app.use((req, res, next) => {
 app.use('/api/calculation', require('./Controllers/CalculationController'));
 
 app.get('/', (req, res) => {
-  res.send('Your API is working!');
+  if(process.env.NODE_ENV !== "PRODUCTION") {
+    res.redirect('/api-docs');
+  } else {
+    res.send('It works! Please refer to the documentation for more information.');
+  }
 });
 
 app.use(errorHandler);
 
-app.listen(3000, () => {
-  logger.info('Server started on port 3000');
+app.listen(port, () => {
+  logger.info('Server is running on port ' + port + '...');
 });
 
 module.exports = app;
