@@ -41,12 +41,15 @@ const getNewTaxableIncome = (data) => {
     return {"Gross Annual Income": grossAnnualSalary, "Taxable Income": taxableIncome, deductions: {total: standardDeduction, deductions: {"Chapter VI A deductions": 0, "Exempt Allowances": 0,"Standard Deduction": standardDeduction}}};
 }
 
+//Calculating Gross Salary: Calculates Gross Salary from the income form
 const getGrossSalary = (incomeForm) => {
     const grossMonthlySalary = incomeForm.basicpay + incomeForm.da + incomeForm.hra + incomeForm.lta + incomeForm.cityallowance + incomeForm.miscellaneous + incomeForm.monthlybonus + incomeForm.quaterlybonus/4 + incomeForm.annualbonus/12;
     const grossAnnualSalary = grossMonthlySalary * 12;
     return {grossMonthlySalary, grossAnnualSalary};
 }
 
+
+//Get Taxes: Calculates taxes for both the regimes
 const getTaxes = (data) => {
 
     const newTaxableIncome = getNewTaxableIncome(data);
@@ -58,6 +61,7 @@ const getTaxes = (data) => {
     return {newRegimeTax: {...newTaxableIncome, tax: newTax}, oldRegimeTax: {...oldTaxableIncome, tax: oldTax}};
 }
 
+//Calculating Old Tax: Calculates tax for the old regime
 const getOldTax = (taxableIncome) => {
     let tax = 0;
     if(taxableIncome > 250000 && taxableIncome <= 500000){
@@ -70,6 +74,7 @@ const getOldTax = (taxableIncome) => {
     return Math.round(tax);
 }
 
+//Calculating New Tax: Calculates tax for the new regime
 const getNewTax = (taxableIncome) => {
     let tax = 0;
     if(taxableIncome > 750000 && taxableIncome <= 900000){
