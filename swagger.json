@@ -431,6 +431,126 @@
           }
         }
       }
+    },
+    "/formValidation/validateIncomeForm": {
+      "post": {
+        "tags": [
+          "Validation"
+        ],
+        "summary": "Endpoint to validate income form",
+        "description": "This endpoint is used to validate the given income form.",
+        "operationId": "validateIncomeForm",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Income form data",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/IncomeForm"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "string",
+                  "example": "success"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable entity",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "string",
+                  "example": "error"
+                },
+                "type": {
+                  "type": "string",
+                  "example": "ValidationError"
+                },
+                "formErrors": {
+                  "type": "object",
+                  "properties": {
+                    "basicpay": {
+                      "type": "string",
+                      "example": "Basic Pay cannot be negative or zero"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/formValidation/validateDeductionForm": {
+      "post": {
+        "tags": [
+          "Validation"
+        ],
+        "summary": "Endpoint to validate deduction form",
+        "description": "This endpoint is used to validate the given deduction form.",
+        "operationId": "validateDeductionForm",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Deduction form data",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "deductionForm": {
+                  "$ref": "#/components/schemas/DeductionForm"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "string",
+                  "example": "success"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable entity",
+            "schema": {
+              "type": "object",
+              "properties":{
+                "status": {
+                  "type": "string",
+                  "example": "error"
+                },
+                "type": {
+                  "type": "string",
+                  "example": "ValidationError"
+                },
+                "formErrors": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

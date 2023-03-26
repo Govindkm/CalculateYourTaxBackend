@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const swaggerUi = require('swagger-ui-express');
-const errorHandler = require('./Middlewares/error');
+const {errorHandler} = require('./Middlewares/error');
 const dotenv = require('dotenv');
 dotenv.config();
 
@@ -37,6 +37,8 @@ app.use((req, res, next) => {
 // Routes
 app.use('/api/calculation', require('./Controllers/CalculationController'));
 
+app.use('/api/formValidation', require('./Controllers/FormValidationController'));
+
 app.get('/', (req, res) => {
   if(process.env.NODE_ENV !== "PRODUCTION") {
     res.redirect('/api-docs');
@@ -45,10 +47,11 @@ app.get('/', (req, res) => {
   }
 });
 
-app.use(errorHandler);
 
 app.listen(port, () => {
   logger.info('Server is running on port ' + port + '...');
 });
+
+app.use(errorHandler);
 
 module.exports = app;

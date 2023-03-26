@@ -4,7 +4,7 @@
   "description": "Backend Service for TaxCalculator Application",
   "main": "app.js",
   "scripts": {
-    "test": "test && mocha --exit || mocha --exit --timeout 10000",
+    "test": "mocha --exit || mocha --exit --timeout 10000",
     "start": "nodemon app.js"
   },
   "keywords": [
