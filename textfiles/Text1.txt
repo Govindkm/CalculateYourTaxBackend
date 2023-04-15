@@ -284,3 +284,162 @@ Incomes that are not taxable are specifically mentioned under the Income-tax Act
 Is pension taxable?
 
 Yes, pension received by an individual is taxable. Even the family pension received is taxable.
+ 
+
+Exemptions and deductions not claimable under the new tax regime
+
+The following are some of the major deductions and exemptions you cannot claim under the new tax system:
+The standard deduction under Section 80TTA/80TTB 
+Professional tax and entertainment allowance on salaries
+Leave Travel Allowance (LTA)
+House Rent Allowance (HRA)
+Minor child income allowance
+Helper allowance
+Children education allowance
+Other special allowances [Section 10(14)]
+Interest on housing loan on the self-occupied property or vacant property (Section 24)
+Chapter VI-A deduction (Section 80C, 80D, 80E and so on, except Section 80CCD(2) and Section 80JJAA)
+Exemption or deduction for any other perquisites or allowances including food allowance of Rs 50/meal subject to 2 meals a day
+Employee's (own) contribution to NPS
+Donation to Political party/trust, etc
+
+What are the exemptions and deductions available under the new regime?
+
+Under New tax regime, you can claim tax exemption for the following:
+Transport allowances in case of a specially-abled person.
+Conveyance allowance received to meet the conveyance expenditure incurred as part of the employment.
+Any compensation received to meet the cost of travel on tour or transfer.
+Daily allowance received to meet the ordinary regular charges or expenditure you incur on account of absence from his regular place of duty.
+Perquisites for official purposes
+Exemption on voluntary retirement 10(10C), gratuity u/s 10(10) and Leave encashment u/s 10(10AA)
+Interest on Home Loan on let-out property (Section 24)
+Gifts up to Rs 5,000
+Deduction for employer’s contribution to NPS account [Section 80CCD(2)]
+Deduction for additional employee cost (Section 80JJA)
+
+
+HOME
+INCOME-TAX
+EFILING-INCOME-TAX-RETURN
+SECTION 115BAC OF INCOME TAX ACT: DEDUCTIONS ALLOWED, EXEMPTIONS, FEATURES OF THE NEW TAX REGIME AND ITS BENEFITS
+Section 115BAC of Income Tax Act: Deductions Allowed, Exemptions, Features of the New Tax Regime and Its Benefits
+Updated on: Apr 13th, 2023
+
+ | 
+
+29 min read
+
+social icons
+social icons
+social icons
+social icons
+Latest update: Budget 2023 changes under new tax regime
+New tax regime will be the default tax regime. However, taxpayers can opt for the old regime
+A tax rebate has been introduced under the new tax regime on income up to Rs.7 lakhs. Therefore, you do not have to pay tax if your taxable income is below Rs.7 lakhs under the new tax regime
+The tax exemption limit of Rs.2.5 lakh has increased to Rs.3 lakh under the new tax regime and tax slabs have been recalibrated under the new tax regime as follows: 
+Up to Rs.3 lakh: Nil
+Rs.3 lakh-Rs.6 lakh: 5%
+Rs.6 lakh-Rs.9 lakh: 10%
+Rs.9 lakh-Rs.12 lakh: 15%
+Rs.12 lakh-Rs.15 lakh: 20%
+Above Rs.15 lakh: 30%
+The standard deduction of Rs 50,000 has been extended to the new tax regime as well
+The highest surcharge rate of 37% has been reduced to 25% under the new tax regime. This move impacts taxpayers earning more than Rs 5 crore. As a result, their overall tax rate will decrease from 42.74% to 39%
+From FY 2020-21, you can choose to pay income tax under an optional new tax regime. The new tax regime is available for individuals and HUFs with lower tax rates and fewer deductions/exemptions. We will discuss the features of the new tax regime and how you can benefit from it.
+
+What is Section 115BAC – the new tax regime?
+The Budget 2020 introduces a new regime under section 115BAC giving individuals and HUF taxpayers an option to pay income tax at lower rates. The new system is applicable for income earned from 1 April 2020 (FY 2020-21), which relates to AY 2021-22.
+
+What are the tax rates under the new regime?
+In Budget 2023, the income tax slabs under the new tax regime have been revised. The new tax slabs under the new tax regime for FY 2023-24 (AY 2024-25) are shown in the table below. The tax rates under the new tax regime for FY 2022-23 (AY 2023-24) are also tabulated below.
+
+Post-Budget new regime tax rates (FY 23-24)	Pre-Budget new regime tax rates (FY 22-23)
+Income Slabs	Rates	Income Slabs	Rates
+Up to Rs 3 lakh	Nil	Up to Rs.2.5 lakh	Nil
+Rs 3 lakh to Rs 6 lakh	5%	Rs 2.5 lakh to Rs 5 lakh	5%
+Rs 6 lakh to Rs 9 lakh	10%	Rs 5 lakh to Rs 7.5 lakh	10%
+Rs 9 lakh to Rs 12 lakh	15%	Rs 7.5 lakh to Rs 10 lakh	15%
+Rs 12 lakh to Rs 15 lakh	20%	Rs 10 lakh to Rs 12.5 lakh	20%
+Income above Rs 15 lakh	30%	Rs 12.5 lakh to Rs 15 lakh	25%
+ 	 	Income above Rs 15 lakh	30%
+The tax rates under the new tax regime and the old tax regime for FY 2022-23 (AY 2023-24) are compared below:
+
+Tax rates under New tax regime 2022-23	Tax rates under Old tax regime 2022-23
+Rs 2.5 lakh to Rs 5 lakh	5%	Rs 2.5 lakh to Rs 5 lakh	5%
+Rs 5 lakh to Rs 7.5 lakh	10%	Rs 5 lakh to Rs 10 lakh	20%
+Rs 7.5 lakh to Rs 10 lakh	15%	Income above Rs 10 lakh	30%
+Rs 10 lakh to Rs 12.5 lakh	20%	 
+Rs 12.5 lakh to Rs 15 lakh	25%
+Income above Rs 15 lakh	30%
+The new tax regime does not allow 70 deductions and exemptions (discussed in para 4). 
+
+The tax payable under both the new and the old regimes without claiming deductions and exemptions for FY 2022-23 (AY 2023-24) is as below:
+
+Annual income^	Tax under the old regime (Rs)	Tax under the new regime (Rs)	Tax savings under the new regime (Rs)
+Up to Rs 7,50,000	65,000	39,000	26,000
+Up to Rs 10,00,000	117,000	78,000	39,000
+Up to Rs 12,50,000	195,000	130,000	65,000
+Up to Rs 15,00,000	273,000	195,000	78,000
+^ Assuming same annual income as base for both regimes which is usually is not the case, since standard deduction and many more deductions/exemptions would not be allowed for new tax regime.
+
+The above table shows that the new tax regime generally saves taxes for taxpayers who don’t claim any deductions or exemptions.
+
+The tax payable under both the new and the old regimes without claiming deductions and exemptions for FY 2023-24 (AY 2024-25) is as below:
+
+Annual income*	Tax under the old regime (Rs)	Tax under the new regime (Rs)	Tax savings under the new regime (Rs)
+Up to Rs 7,50,000	65,000	31,200	33,800
+Up to Rs 10,00,000	117,000	62,400	54,600
+Up to Rs 12,50,000	195,000	1,04,000	65,000
+Up to Rs 15,00,000	273,000	1,56,000	1,17,000
+*Assumed that the annual income is after considering the standard deduction under both old and new regimes.
+
+Exemptions and deductions not claimable under the new tax regime
+The following are some of the major deductions and exemptions you cannot claim under the new tax system:
+
+The standard deduction under Section 80TTA/80TTB 
+Professional tax and entertainment allowance on salaries
+Leave Travel Allowance (LTA)
+House Rent Allowance (HRA)
+Minor child income allowance
+Helper allowance
+Children education allowance
+Other special allowances [Section 10(14)]
+Interest on housing loan on the self-occupied property or vacant property (Section 24)
+Chapter VI-A deduction (Section 80C, 80D, 80E and so on, except Section 80CCD(2) and Section 80JJAA)
+Exemption or deduction for any other perquisites or allowances including food allowance of Rs 50/meal subject to 2 meals a day
+Employee's (own) contribution to NPS
+Donation to Political party/trust, etc
+Budget 2023 update- Deduction from family pension income only for years up to FY 2022-23 (From FY 2023-24, this is allowed as deduction)
+Budget 2023 update- Standard deduction of Rs.50,000 only for years up to FY 2022-23 (From FY 2023-24, this is allowed as deduction)
+What are the exemptions and deductions available under the new regime?
+Under New tax regime, you can claim tax exemption for the following:
+
+Transport allowances in case of a specially-abled person.
+Conveyance allowance received to meet the conveyance expenditure incurred as part of the employment.
+Any compensation received to meet the cost of travel on tour or transfer.
+Daily allowance received to meet the ordinary regular charges or expenditure you incur on account of absence from his regular place of duty.
+Perquisites for official purposes
+Exemption on voluntary retirement 10(10C), gratuity u/s 10(10) and Leave encashment u/s 10(10AA)
+Interest on Home Loan on let-out property (Section 24)
+Gifts up to Rs 5,000
+Deduction for employer’s contribution to NPS account [Section 80CCD(2)]
+Deduction for additional employee cost (Section 80JJA)
+Budget 2023 introduced a standard deduction of Rs 50,000 under New Tax Regime applicable from FY 2023-24
+Budget 2023 also introduced deduction under Section 57(iia) of family pension income
+Budget 2023 further introduced deduction of amount paid or deposited in the Agniveer Corpus Fund under Section 80CCH(2)
+Here's a detailed list of exemptions and deductions available under Old vs New Regime.
+
+Can I choose between the new tax regime and the existing regime?
+
+A salaried taxpayer can choose the new tax regime at the beginning of FY 2023-24 and intimate their employer. The employee cannot change their choice anytime during the financial year. However, they can change their choice when filing the income tax return in July 2024.
+The due date for tax filing for the FY 2022-23 (AY 2023-24) is 31st July 2023.
+In case an employee does not choose the new tax regime at the beginning of the financial year, the employer will deduct tax (TDS) under the existing tax regime. A salaried taxpayer can choose the new tax regime in one year and choose the regular tax regime in another year.
+A non-salaried taxpayer has to choose the new regime when filing the tax return. They need not declare or intimate their choice to anyone during the year. However, a non-salaried taxpayer (taxpayers with an income from business or profession) cannot opt-in and opt-out of the new tax regime every year. Once a non-salaried opts out of the new tax regime, they cannot opt-in again for the new tax regime in the future.
+
+
+Links to refer:
+https://www.hdfcbank.com/personal/resources/learning-centre/pay/difference-between-new-tax-regime-vs-old-tax-regime
+https://economictimes.indiatimes.com/wealth/income-tax-slabs
+https://www.bankbazaar.com/tax/income-tax-slabs.html
+https://cleartax.in/s/section-115bac-features-new-tax-regime-benefits
+

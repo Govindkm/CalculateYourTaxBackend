@@ -38,8 +38,8 @@ class GPTChatBot {
 
         console.log("SPlitting text files...");
         const textSplietter = new RecursiveCharacterTextSplitter({
-            chunkSize: 1000,
-            chunckOverlap: 200,
+            chunkSize: 500,
+            chunckOverlap: 100,
         });
 
         const splittedDocs = await textSplietter.splitDocuments(docs);
