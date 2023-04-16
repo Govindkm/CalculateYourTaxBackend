@@ -38,7 +38,7 @@ To install and run the service, follow these steps:
 2. Install dependencies:
 
    ```
-   cd CalculateYourBackend
+   cd CalculateYourTaxBackend
    npm install
    ```
 
