@@ -39,6 +39,10 @@ app.use('/api/calculation', require('./Controllers/CalculationController'));
 
 app.use('/api/formValidation', require('./Controllers/FormValidationController'));
 
+//Endpoints to chatbot
+app.use('/api/chatbot', require('./Controllers/ChatBotController'));
+
+
 app.get('/', (req, res) => {
   if(process.env.NODE_ENV !== "PRODUCTION") {
     res.redirect('/api-docs');
