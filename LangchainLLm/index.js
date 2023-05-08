@@ -7,23 +7,20 @@ const { RecursiveCharacterTextSplitter } = require('langchain/text_splitter');
 const { TextLoader } = require('langchain/document_loaders');
 const { loadQAStuffChain } = require('langchain/chains');
 const fs = require('fs/promises');
-const readline = require('readline');
 
 class GPTChatBot {
     #model;
     #chainA;
     #object;
     constructor() {
-        this.#model = new OpenAI({ openAIApiKey: process.env.OPENAI_API_KEY, temperature: 0.9, model_name: "text-ada-001" });
-        this.#chainA = loadQAStuffChain(this.#model);
-
         if (process.env.NODE_ENV !== 'production') {
             dotenv.config({ path: '../../.env' });
         }
         else {
             dotenv.config({ path: './environments/production.env' });
         }
-
+        this.#model = new OpenAI({ openAIApiKey: process.env.OPEN_API_KEY, temperature: 0.7, model_name: "text-ada-001" });
+        this.#chainA = loadQAStuffChain(this.#model);
         this.directory = path.join(__dirname, 'data');
         this.chainA = loadQAStuffChain(this.#model);
 
@@ -47,7 +44,7 @@ class GPTChatBot {
         // console.log({splittedDocs});
 
         console.log("Creating vector store...");
-        const vectorStore = await HNSWLib.fromDocuments(splittedDocs, new OpenAIEmbeddings());
+        const vectorStore = await HNSWLib.fromDocuments(splittedDocs, new OpenAIEmbeddings({openAIApiKey: process.env.OPEN_API_KEY}));
         await vectorStore.save(this.directory);
         console.log("Vector store created.");
         return vectorStore;
@@ -68,7 +65,7 @@ class GPTChatBot {
 
         const loadedVectorStore = await HNSWLib.load(
             this.directory,
-            new OpenAIEmbeddings()
+            new OpenAIEmbeddings({openAIApiKey: process.env.OPEN_API_KEY})
         );
         console.log("Vector store loaded.");
         return loadedVectorStore;
@@ -83,7 +80,7 @@ class GPTChatBot {
         }
 
         const docs = await vectorStore.similaritySearch(question, 5);
-        // console.log({ docs });
+        console.log({ docs });
         const resp = await this.chainA.call({
             input_documents: docs,
             question: question,
