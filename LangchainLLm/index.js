@@ -7,6 +7,14 @@ const { RecursiveCharacterTextSplitter } = require('langchain/text_splitter');
 const { TextLoader } = require('langchain/document_loaders');
 const { loadQAStuffChain } = require('langchain/chains');
 const fs = require('fs/promises');
+let fetch;
+(async () => {
+  const module = await import('node-fetch');
+  fetch = module.default;
+  global.fetch = fetch;
+  global.Headers = fetch.Headers;
+})();
+
 
 class GPTChatBot {
     #model;
