@@ -5,6 +5,10 @@ const swaggerUi = require('swagger-ui-express');
 const {errorHandler} = require('./Middlewares/error');
 const dotenv = require('dotenv');
 dotenv.config();
+const fetch = require('node-fetch');
+
+global.fetch = fetch;
+global.Headers = fetch.Headers;
 
 const port = process.env.PORT || 3000;
 
