@@ -4,11 +4,18 @@ const cors = require('cors');
 const swaggerUi = require('swagger-ui-express');
 const {errorHandler} = require('./Middlewares/error');
 const dotenv = require('dotenv');
+// const fetch = require('node-fetch');
 dotenv.config();
-const fetch = require('node-fetch');
 
-global.fetch = fetch;
-global.Headers = fetch.Headers;
+let fetch;
+(async () => {
+  const module = await import('node-fetch');
+  fetch = module.default;
+  global.fetch = fetch;
+  global.Headers = fetch.Headers;
+})();
+
+
 
 const port = process.env.PORT || 3000;
 
