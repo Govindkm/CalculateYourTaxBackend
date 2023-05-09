@@ -325,14 +325,6 @@ SECTION 115BAC OF INCOME TAX ACT: DEDUCTIONS ALLOWED, EXEMPTIONS, FEATURES OF TH
 Section 115BAC of Income Tax Act: Deductions Allowed, Exemptions, Features of the New Tax Regime and Its Benefits
 Updated on: Apr 13th, 2023
 
- | 
-
-29 min read
-
-social icons
-social icons
-social icons
-social icons
 Latest update: Budget 2023 changes under new tax regime
 New tax regime will be the default tax regime. However, taxpayers can opt for the old regime
 A tax rebate has been introduced under the new tax regime on income up to Rs.7 lakhs. Therefore, you do not have to pay tax if your taxable income is below Rs.7 lakhs under the new tax regime
@@ -443,3 +435,31 @@ https://economictimes.indiatimes.com/wealth/income-tax-slabs
 https://www.bankbazaar.com/tax/income-tax-slabs.html
 https://cleartax.in/s/section-115bac-features-new-tax-regime-benefits
 
+Some queries related to Application.
+
+Query 1. I am not able to move from income tax screen to tax summary screen.
+Resolution: The income tax must contain basic pay component and if it is left empty user will not be able to navigate.
+
+Query 2. When I am trying to navigate after filling my exemptions in exemption screen. I am getting redirected to incomet tax screen?
+Resolution: Your exemptions cannot exceed the amount you are getting in income for the different components. Please check the inputs provided.
+
+Query 3: When I am adding more than 50000 in NPS it is throwing error?
+Resolution: Deductions under NPS are non taxable upto 50000. So you cannot add more than 50000 to claim.
+
+Query 4: I am getting error while using the chatbot.
+Resolution: The chatbot is in beta stage and requires development work to be fully functional. Some users may face error while using it.
+
+Query 5: I followed following steps:
+1. Filled details in income form.
+2. Filled details in deductions form with all neccessary details.
+3. Filled details in exemptions form with all neccessary details.
+While navigating on tax summary page, I am getting error while connecting to server.
+Resolution: The backend services are under maintainance. We will notify you once the service are back online.
+
+Query 6: I am trying to navigate from deduction form but getting error
+Form validation error: "deductions":"Total deductions claimed cannot be more than gross income"
+Resolution: You have entered amount under deduction which is more than the actual income you have. Please validate your details in the income form.
+
+Query 7: I am getting error :
+Form validation error: "section80C":"Deductions under Section 80C cannot be more than 150000"
+Resolution: You have entered more than 150000 under the different components which come in Section 80C. The total should not exceed by 150000.
