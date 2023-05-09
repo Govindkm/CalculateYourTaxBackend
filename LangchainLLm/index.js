@@ -7,6 +7,7 @@ const { RecursiveCharacterTextSplitter } = require('langchain/text_splitter');
 const { TextLoader } = require('langchain/document_loaders');
 const { loadQAStuffChain } = require('langchain/chains');
 const fs = require('fs/promises');
+const logger = require('../Middlewares/logging');
 
 
 class GPTChatBot {
@@ -45,7 +46,7 @@ class GPTChatBot {
         // console.log({splittedDocs});
 
         console.log("Creating vector store...");
-        const vectorStore = await HNSWLib.fromDocuments(splittedDocs, new OpenAIEmbeddings({openAIApiKey: process.env.OPEN_API_KEY}));
+        const vectorStore = await HNSWLib.fromDocuments(splittedDocs, new OpenAIEmbeddings({ openAIApiKey: process.env.OPEN_API_KEY }));
         await vectorStore.save(this.directory);
         console.log("Vector store created.");
         return vectorStore;
@@ -66,28 +67,34 @@ class GPTChatBot {
 
         const loadedVectorStore = await HNSWLib.load(
             this.directory,
-            new OpenAIEmbeddings({openAIApiKey: process.env.OPEN_API_KEY})
+            new OpenAIEmbeddings({ openAIApiKey: process.env.OPEN_API_KEY })
         );
         console.log("Vector store loaded.");
         return loadedVectorStore;
     }
 
     async askQuestion(question) {
-       
-        if(await this.pathExists(this.directory)){
-            var vectorStore = await this.loadVectorEmbeddings();
-        } else {
-            var vectorStore = await this.createVectorEmbeddings();
+
+        try {
+            if (await this.pathExists(this.directory)) {
+                var vectorStore = await this.loadVectorEmbeddings();
+            } else {
+                var vectorStore = await this.createVectorEmbeddings();
+            }
+
+            const docs = await vectorStore.similaritySearch(question, 5);
+            console.log({ docs });
+            const resp = await this.chainA.call({
+                input_documents: docs,
+                question: question,
+            });
+
+            return resp;
+        } catch (err) {
+            logger.error(err);
+
+            return "Error occured while processing your request. Please try again later.";
         }
-
-        const docs = await vectorStore.similaritySearch(question, 5);
-        console.log({ docs });
-        const resp = await this.chainA.call({
-            input_documents: docs,
-            question: question,
-        });
-
-        return resp;
 
     }
 }
@@ -127,14 +134,14 @@ class GPTChatBot {
 //     // console.log("Press any key to exit.");
 // }
 
-class SingletonChatBot{
-    constructor(){
-        if(!SingletonChatBot.instance){
+class SingletonChatBot {
+    constructor() {
+        if (!SingletonChatBot.instance) {
             SingletonChatBot.instance = new GPTChatBot();
         }
     }
 
-    getInstance(){
+    getInstance() {
         return SingletonChatBot.instance;
     }
 }
