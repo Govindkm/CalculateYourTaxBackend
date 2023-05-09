@@ -7,14 +7,6 @@ const dotenv = require('dotenv');
 // const fetch = require('node-fetch');
 dotenv.config();
 
-let fetch;
-(async () => {
-  const module = await import('node-fetch');
-  fetch = module.default;
-  global.fetch = fetch;
-  global.Headers = fetch.Headers;
-})();
-
 
 
 const port = process.env.PORT || 3000;
