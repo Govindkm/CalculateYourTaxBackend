@@ -463,3 +463,49 @@ Resolution: You have entered amount under deduction which is more than the actua
 Query 7: I am getting error :
 Form validation error: "section80C":"Deductions under Section 80C cannot be more than 150000"
 Resolution: You have entered more than 150000 under the different components which come in Section 80C. The total should not exceed by 150000.
+
+Triage Case ID: 123456
+Title: [ABC Corp] OTP | Workpapers | TD RANGE not pulling data
+
+Description:
+OTP | Workpapers | TD RANGE not pulling data
+
+Steps to recreate:
+1. Go to CHG1234567
+2. Go to workpapers, register. Username: abc@abccorp Password: abcd2033@
+Account: ABC Corp
+3. Go to Functions, GET,
+Select product Tax Provision
+Select feature RANGE TD - Temp Diffs - Tax Basis
+Select field RANGE TD, Temp Diffs - Tax Basis
+Dataset Type: Provision
+Dataset: 2021 12 - Q4 Accrual
+Unit: 0029~ ABC Corp Germany GmbH (f/k/a Dow AgroSciences GmbH)
+Adjustment: All (Perpetual)
+Class: All (Perpetual)
+Subclass: All (Perpetual)
+
+It shows the time stamp but does not GET the amount
+
+Resolution Details:
+Able to replicate the issue in Clients copied schema in QA. Created a Bug for this.
+Bug 2233445: [ABC Corp] OTP | Workpapers | TD RANGE not pulling data
+
+Triage Case ID: 124456
+Title: [Alpha Beta] OTP | Integration - OIT | Return Worksheet | Error Encountered
+Description:
+Schema: AlphaT900
+
+CHG123231 - cppads08
+
+User is attempting to transfer data into Tax Prov - Return Dataset using Enhanced Integration (OIT > OTP). When in the Return Worksheet, he is able to select the options in the drop-down menu; however, when he clicks on Retrieve Data he then receives an "ERROR: Error encountered" message
+
+The following has been confirmed: 
+
+The Years agree in all systems - Dataset Year, Map/Mapset Year, Binder Year. 
+The Binder ID is correctly set up in OIT. 
+The Return Dataset has properly established the Dataset Relations.
+
+Resolution Details:
+The issue was happening because for the year 2021, there was no Parent Binder assigned.
+Under OIT, once an entity is set as parent binder the issue is resolved and the client was able to retrieve the data from OIT into OTP.
