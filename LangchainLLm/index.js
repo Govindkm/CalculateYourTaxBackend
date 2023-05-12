@@ -21,7 +21,7 @@ class GPTChatBot {
         else {
             dotenv.config({ path: './environments/production.env' });
         }
-        this.#model = new OpenAI({ openAIApiKey: process.env.OPEN_API_KEY, temperature: 0.7, model_name: "text-ada-001" });
+        this.#model = new OpenAI({ openAIApiKey: process.env.OPEN_API_KEY, temperature: 0.7, model_name: "gpt-3.5-turbo" });
         this.#chainA = loadQAStuffChain(this.#model);
         this.directory = path.join(__dirname, 'data');
         this.chainA = loadQAStuffChain(this.#model);
