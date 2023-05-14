@@ -488,6 +488,7 @@ Triage Case ID: 244020
 Title: User able to access OTP from old company with new ID created in different company but with same username ID
 Schema: SomeCompany_OTP_7
 
+
 Description:
 
 User ID testuser is now working for new company: testcompany   DBID: C4  , when user logs in, she sees the correct company name in OneSource , but when she clicks on Tax Provision tile, she gets access to her old company: FormerCompany DBID: 1A Tax Provision instance (ID: 14452122) and she´s able to see the datasets from old company.
@@ -507,3 +508,4 @@ Instance Name: Tax Provision v2016
 Resolutions Details:
 We noticed this issue is happening to users who are inactive in AD. Created below bug to address this issue.
 Bug 456789: OTP | Admin | User Deletion/updates from concert are failing in OTP if user is inactive in AD
+Link to case: www.otp.com/triage/case/244020
