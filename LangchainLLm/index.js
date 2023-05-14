@@ -82,7 +82,7 @@ class GPTChatBot {
                 var vectorStore = await this.createVectorEmbeddings();
             }
 
-            const docs = await vectorStore.similaritySearch(question, 5);
+            const docs = await vectorStore.similaritySearch(question, 2);
             console.log({ docs });
             const resp = await this.chainA.call({
                 input_documents: docs,
