@@ -429,7 +429,7 @@ In case an employee does not choose the new tax regime at the beginning of the f
 A non-salaried taxpayer has to choose the new regime when filing the tax return. They need not declare or intimate their choice to anyone during the year. However, a non-salaried taxpayer (taxpayers with an income from business or profession) cannot opt-in and opt-out of the new tax regime every year. Once a non-salaried opts out of the new tax regime, they cannot opt-in again for the new tax regime in the future.
 
 
-Links to refer:
+Links to refer for tax related information:
 https://www.hdfcbank.com/personal/resources/learning-centre/pay/difference-between-new-tax-regime-vs-old-tax-regime
 https://economictimes.indiatimes.com/wealth/income-tax-slabs
 https://www.bankbazaar.com/tax/income-tax-slabs.html
@@ -463,18 +463,18 @@ It shows the time stamp but does not GET the amount
 Resolution Details:
 Able to replicate the issue in Clients copied schema in QA. Created a Bug for this.
 Bug 2233445: [ABC Corp] OTP | Workpapers | TD RANGE not pulling data
+Link to case: www.otp.com/triage/case/123456
 
 Triage Case ID: 124456
 Title: [Alpha Beta] OTP | Integration - OIT | Return Worksheet | Error Encountered
-Description:
 Schema: AlphaT900
+Change Request Id: CHG123231 - cppads08
 
-CHG123231 - cppads08
+Description:
 
 User is attempting to transfer data into Tax Prov - Return Dataset using Enhanced Integration (OIT > OTP). When in the Return Worksheet, he is able to select the options in the drop-down menu; however, when he clicks on Retrieve Data he then receives an "ERROR: Error encountered" message
 
 The following has been confirmed: 
-
 The Years agree in all systems - Dataset Year, Map/Mapset Year, Binder Year. 
 The Binder ID is correctly set up in OIT. 
 The Return Dataset has properly established the Dataset Relations.
@@ -482,3 +482,28 @@ The Return Dataset has properly established the Dataset Relations.
 Resolution Details:
 The issue was happening because for the year 2021, there was no Parent Binder assigned.
 Under OIT, once an entity is set as parent binder the issue is resolved and the client was able to retrieve the data from OIT into OTP.
+Link to case: www.otp.com/triage/case/124456
+
+Triage Case ID: 244020
+Title: User able to access OTP from old company with new ID created in different company but with same username ID
+Schema: SomeCompany_OTP_7
+
+Description:
+
+User ID testuser is now working for new company: testcompany   DBID: C4  , when user logs in, she sees the correct company name in OneSource , but when she clicks on Tax Provision tile, she gets access to her old company: FormerCompany DBID: 1A Tax Provision instance (ID: 14452122) and she´s able to see the datasets from old company.
+We confirmed she was setup on her new company using the same login ID she had on her old company keeladuncan   , old company deleted her account from OneSource but she´s still showing access in Tax Provision Administration (we removed access immediately). I advised user to request new account be created for her with different login ID on her new company and delete current ID testuser to avoid further issues.
+
+Submitted ADO case for this bug that is allowing a Onesource account, deleted on one platform and re-created on another platform as duplicate, to launch OTP applications on its previous home Onesource platform
+
+Previous company info:
+OTP Container ID: testcompany
+Platform Firm ID: C4
+Schema Name: SomeCompany_OTP_7
+Region: AMER
+DB Server: C4
+Instance ID: 14452122
+Instance Name: Tax Provision v2016
+
+Resolutions Details:
+We noticed this issue is happening to users who are inactive in AD. Created below bug to address this issue.
+Bug 456789: OTP | Admin | User Deletion/updates from concert are failing in OTP if user is inactive in AD
