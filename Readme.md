@@ -59,5 +59,3 @@ To install and run the service, follow these steps:
 Here are the available endpoints:
 
 To be updated soon.
-
-Note: You'll need to authenticate with a JWT token to access these endpoints.
