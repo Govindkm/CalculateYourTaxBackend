@@ -82,11 +82,12 @@ class GPTChatBot {
                 var vectorStore = await this.createVectorEmbeddings();
             }
 
-            const docs = await vectorStore.similaritySearch(question, 2);
+            const docs = await vectorStore.similaritySearch(question, 3);
             console.log({ docs });
+            let query = `Our customer use this tool to query details. Provided the context and query give correct answer to the user query based on context provided. If you are not able to find answer then ask for more details. Here is the query: ${question}`;
             const resp = await this.chainA.call({
                 input_documents: docs,
-                question: question,
+                question: query,
             });
 
             return resp;
