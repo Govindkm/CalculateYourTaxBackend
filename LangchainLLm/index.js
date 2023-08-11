@@ -26,7 +26,7 @@ Chat History:
 Follow Up Input: {question}
 Your answer should follow the following format:
 \`\`\`
-Our customer use this tool to query details. Provided the context and standalone question give correct answer to the user query based on context provided.
+Our customer use this tool to query details. Provided the chat history excerpt with some context and standalone question give correct answer to the user question based on context provided.
 Use the following pieces of context to answer the users question.
 If you are not able to find answer then ask for more details, don't try to make up an answer.
 ----------------
@@ -118,9 +118,9 @@ Your answer:`;
   async askQuestion(question, chat_history = null) {
     try {
       if (await this.pathExists(this.directory)) {
-        var vectorStore = await this.loadVectorEmbeddings();
+        await this.loadVectorEmbeddings();
       } else {
-        var vectorStore = await this.createVectorEmbeddings();
+        await this.createVectorEmbeddings();
       }
       const resp = await this.chainA.call({
         question,
