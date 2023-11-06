@@ -37,8 +37,9 @@ class GPTChatBot {
 
         console.log("SPlitting text files...");
         const textSplietter = new RecursiveCharacterTextSplitter({
-            chunkSize: 500,
+            chunkSize: 1000,
             chunckOverlap: 100,
+            separators: ["\n\n", "\n\r", "\n", " "]
         });
 
         const splittedDocs = await textSplietter.splitDocuments(docs);
@@ -84,7 +85,14 @@ class GPTChatBot {
 
             const docs = await vectorStore.similaritySearch(question, 3);
             console.log({ docs });
-            let query = `Our customer use this tool to query details. Provided the context and query give correct answer to the user query based on context provided. If you are not able to find answer then ask for more details. Here is the query: ${question}`;
+            let query = `Our customer use this tool to query details. Provided the context and query give correct answer to the user query based on context provided. If you are not able to find answer then ask for more details. Here is the query: ${question}
+            Do not mix two different cases while checking for resolutions.
+
+            Provide information in this format:
+
+            Similar Case: {case id and url here}
+            Resolution: Case resolution here
+            `;
             const resp = await this.chainA.call({
                 input_documents: docs,
                 question: query,
